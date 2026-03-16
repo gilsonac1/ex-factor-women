@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import bgImage from "@/assets/bg-peaceful.jpg";
+import bradImage from "@/assets/brad-browning.png";
 
 const brandEase = [0.2, 0, 0, 1] as const;
 
