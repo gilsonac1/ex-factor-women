@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import bgImage from "@/assets/bg-peaceful.jpg";
+import bradImage from "@/assets/brad-browning.png";
 
 const brandEase = [0.2, 0, 0, 1] as const;
 
@@ -40,16 +41,16 @@ const Index = () => {
           women regarding relationship dynamics and communication.
         </motion.p>
 
-        {/* Frame button */}
+        {/* Video thumbnail */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: brandEase }}
           className="flex justify-center mb-12"
         >
-          <div className="px-6 py-2 border border-foreground/10 rounded-full text-xs uppercase tracking-[0.15em] text-foreground/40 font-semibold">
-            Secure Access Point
-          </div>
+          <a href="#" className="block rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-md w-full">
+            <img src={bradImage} alt="Brad Browning - Get Your Boyfriend Back" className="w-full h-auto" />
+          </a>
         </motion.div>
 
         {/* CTA */}
