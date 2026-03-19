@@ -42,13 +42,17 @@ const Index = () => {
         </motion.p>
 
         {/* Video thumbnail */}
-        <motion.div
+       <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.3, ease: brandEase }}
           className="flex justify-center mb-12"
         >
-          <a href="https://hop.clickbank.net/?affiliate=gilsonac&vendor=brbrowning&tid=gadsf&p=f" className="block rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-md w-full">
+          <a 
+            href="https://hop.clickbank.net/?affiliate=gilsonac&vendor=brbrowning&tid=gadsf&p=f" 
+            onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17981658580/gfpiCMbx2oscENSrqf5C'})}
+            className="block rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 max-w-md w-full"
+          >
             <img src={bradImage} alt="Brad Browning - Get Your Boyfriend Back" className="w-full h-auto" />
           </a>
         </motion.div>
@@ -61,6 +65,7 @@ const Index = () => {
         >
           <motion.a
             href="https://hop.clickbank.net/?affiliate=gilsonac&vendor=brbrowning&tid=gadsf&p=f"
+            onClick={() => (window as any).gtag?.('event', 'conversion', {'send_to': 'AW-17981658580/gfpiCMbx2oscENSrqf5C'})}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98, y: 2 }}
             className="inline-block bg-primary text-primary-foreground font-semibold uppercase tracking-[0.08em] text-sm px-10 py-5 rounded-full transition-shadow duration-300"
